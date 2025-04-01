@@ -28,4 +28,4 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 # Sitemap location
-Sitemap: https://designhub.example.com/sitemap.xml
+Sitemap: https://holouni.eu/sitemap.xml
