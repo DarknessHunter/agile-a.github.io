@@ -9,289 +9,120 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        :root {
-            --primary: #053071;
-            --secondary: #b3b3b3;
-            --accent: #FF6B6B;
-        }
+      
+      :root {
+    --primary: #053071;
+    --secondary: #b3b3b3;
+    --accent: #12e034;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+}
 
-        body {
-            font-family: 'Lato', sans-serif;
-            line-height: 1.8;
-            color: #333;
-            text-align: justify;
-            hyphens: auto;
-        }
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.8;
+    color: var(--text-color);
+    text-align: left;
+    background-color: var(--light-bg);
+    margin: 0;
+    padding: 0;
+}
 
-        /* Enhanced Header */
-        .main-header {
+/* Header */
+.main-header {
     background: linear-gradient(135deg, #004299 0%, #062e57 100%);
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-    border-bottom: 2px solid rgba(255,255,255,0.08);
-    animation: gradientFlow 12s ease infinite;
-    background-size: 300% 300%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(8px);
-    font-family: 'Inter', sans-serif;
-}
-
-@keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    text-align: center;
 }
 
 .logo {
-    font-family: 'Abril Fatface', cursive;
-    font-size: 3.2rem;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    letter-spacing: -1.5px;
-    position: relative;
-    padding: 0 2rem;
-    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
-    background: linear-gradient(45deg, #ffffff 45%, #008cf7 55%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.logo::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    height: 3px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        #23edcf 30%, 
-        rgba(0, 255, 51, 0.5) 70%, 
-        transparent 100%
-    );
-    animation: shineLine 4s infinite;
-}
-
-@keyframes shineLine {
-    0% { opacity: 0.8; }
-    50% { opacity: 1; }
-    100% { opacity: 0.8; }
-}
-
-.lang-switcher {
-    position: relative;
-    padding: 0.8rem 2rem;
-    border-radius: 30px;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: #00ffd5;
-    font-weight: 500;
-    transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: white;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
 }
 
-.lang-switcher::after {
-    content: '➔';
-    font-size: 1.1rem;
-    transition: transform 0.3s ease;
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.lang-switcher:hover {
-    background: rgba(255,215,0,0.1);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255,215,0,0.15);
+/* Sections */
+.article-section {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    
 }
 
-.lang-switcher:hover::after {
-    transform: translateX(3px);
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
 }
 
-/* Add to HTML head */
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+/* Case Study */
+.case-study {
+    background: var(--primary);
+    color: white;
+    padding: 5rem 2rem;
+    border-radius: 12px;
+    text-align: left;
+}
 
-        /* Content Sections */
-        .article-section {
-            margin: 5rem 0;
-            padding: 2rem 0;
-        }
+.case-study h2 {
+    font-size: 2.2rem;
+    text-align: left;
+}
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
+.case-study p {
+    text-align: left;
+}
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 80px;
-            height: 3px;
-            background: var(--accent);
-        }
+/* Footer */
+.main-footer {
+    background: var(--primary);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
 
-        .featured-image {
-            border-radius: 12px;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-            transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-            margin: 3rem 0;
-        }
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
-        .featured-image:hover {
-            transform: translateY(-5px);
-        }
 
-        /* Key Points Grid */
-        .key-points-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            counter-reset: key-point;
-        }
-
-        .key-point {
-            padding: 2rem;
-            border: 2px solid rgba(5,48,113,0.1);
-            border-radius: 12px;
-            position: relative;
-            counter-increment: key-point;
-            background: white;
-            transition: transform 0.3s ease;
-        }
-
-        .key-point:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .key-point::before {
-            content: counter(key-point);
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            border-radius: 50%;
-            font-size: 1.2rem;
-        }
-
-        /* Professional Comparison Section */
-        .comparison-section {
-            background: #f8fafc;
-            padding: 4rem 0;
-            margin: 4rem 0;
-        }
-
-        .methodology-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2.5rem;
-            height: 100%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(5,48,113,0.1);
-        }
-
-        .methodology-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-        }
-
-        .methodology-icon {
-            width: 100px;
-            height: 100px;
-            background: var(--primary);
-            border-radius: 50%;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: white;
-        }
-
-        .methodology-stats {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item {
-            padding: 1.5rem;
-            background: rgba(5,48,113,0.03);
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-        }
-
-        /* Case Study Section */
-        .case-study {
-            background: var(--primary);
-            color: white;
-            padding: 6rem 2rem;
-            margin: 6rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .case-study::before {
-            content: '“';
-            position: absolute;
-            top: -50px;
-            left: 20px;
-            font-size: 25rem;
-            color: rgba(255,255,255,0.05);
-            font-family: 'Times New Roman', serif;
-            z-index: 0;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--accent);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        /* Footer */
-        .main-footer {
-            background: var(--primary);
-            color: white;
-            padding: 4rem 0;
-            position: relative;
-        }
-
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .logo { font-size: 2rem; }
-            .section-title { font-size: 2rem; }
-            .methodology-card { margin-bottom: 2rem; }
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .container {
+        padding: 1rem;
+    }
+}
     </style>
+   
 </head>
 <body>
     <header class="main-header">
@@ -310,7 +141,7 @@
             <div class="lead-paragraph bg-white p-4 rounded shadow-sm">
                 <p>Nel mondo dello sviluppo software, l'adattabilità è la chiave per il successo. Il metodo Agile trasforma il modo in cui i team creano soluzioni digitali, favorendo collaborazione, iterazioni rapide e un miglior allineamento con le esigenze del cliente.</p>
             </div>
-            <img src=img1.jpg alt="Agile Methodology" class="featured-image img-fluid" data-aos="zoom-in">
+            <img src="img/img1.jpg" alt="Agile Methodology" class="featured-image img-fluid" data-aos="zoom-in">
         </section>
 
         <!-- Key Points Section -->
@@ -415,7 +246,7 @@
                     <div class="col-lg-6">
                         <div class="methodology-card">
                             <div class="methodology-header">
-                                <div class="methodology-icon bg-success">
+                                <div class="methodology">
                                     <i class="fas fa-sync-alt"></i>
                                 </div>
                                 <h3>Agile</h3>
@@ -470,7 +301,7 @@
                     <p>I dati del Chaos Report 2020 evidenziano l’importanza di adottare metodologie flessibili come l’Agile</p>
                     <p>Il Chaos Report 2020 conferma che l’Agile non solo migliora le probabilità di successo, ma riduce anche i rischi di fallimento, rendendolo la scelta preferita per progetti complessi e dinamici.</p>
                 </div>
-                <img src=img3.jpg alt="Chaos Report" class="featured-image img-fluid mt-5" data-aos="zoom-in">
+                <img src="img/img3.jpg" alt="Chaos Report" class="featured-image img-fluid mt-5" data-aos="zoom-in">
             </div>
         </section>
 
@@ -514,7 +345,7 @@
                 <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
                 <a href="#" class="text-white"><i class="fab fa-github fa-lg"></i></a>
             </div>
-            <p class="mb-0 small">© 2024 DesignHUB. Tutti i diritti riservati</p>
+            <p class="mb-0 small">© 2025 DesignHUB. Tutti i diritti riservati</p>
             <div class="mt-3">
                 <a href="#" class="text-white mx-2">Privacy Policy</a>
                 <a href="#" class="text-white mx-2">Termini di Servizio</a>
