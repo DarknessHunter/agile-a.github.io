@@ -2,56 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Homepage -->
+  <!-- Homepage (only page) -->
   <url>
-    <loc>https://designhub.example.com/</loc>
+    <loc>https://holouni.eu/</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://designhub.example.com/img/img1.jpg</image:loc>
+      <image:loc>https://holouni.eu/img/img1.jpg</image:loc>
       <image:title>Agile Methodology</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://designhub.example.com/img/img3.jpg</image:loc>
+      <image:loc>https://holouni.eu/img/img3.jpg</image:loc>
       <image:title>Chaos Report</image:title>
     </image:image>
-  </url>
-  
-  <!-- Potential additional pages based on site structure -->
-  <url>
-    <loc>https://designhub.example.com/agile-methodology</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://designhub.example.com/case-studies</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://designhub.example.com/comparison</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://designhub.example.com/privacy-policy</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  
-  <url>
-    <loc>https://designhub.example.com/terms-of-service</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
   
 </urlset>
