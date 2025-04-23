@@ -7,6 +7,7 @@
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <!-- Custom Styles -->
   <meta name="description" content="Codice Blu - Framework Agile Enterprise">
@@ -300,84 +301,96 @@
       font-weight: 700;
     }
     @media (max-width: 768px) {
-    .key-point-number {
-        font-size: 30px; /* Reduce font size for smaller screens */
-        width: 60px; /* Smaller circle */
-        height: 60px; /* Smaller circle */
-        margin-right: 20px; /* Reduce spacing */
-    }
-
-    .key-point:not(:last-child)::after {
-        width: 1px; /* Thinner line for smaller screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .key-point-number {
-        font-size: 25px; /* Further reduce font size */
-        width: 50px; /* Even smaller circle */
-        height: 50px; /* Even smaller circle */
-        margin-right: 15px; /* Further reduce spacing */
-    }
-
-    .key-point:not(:last-child)::after {
-        width: 1px; /* Keep the line thin */
-    }
-}
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .key-points-section {
-      padding: 20px 20px;
-      }
       .key-point {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 20px;
+        flex-direction: row; /* Ensure the number and content are side by side */
+        align-items: flex-start; /* Align items at the top */
+        text-align: left; /* Align text to the left */
       }
       .key-point-number {
-      font-size: 30px;
-      margin-right: 15px;
-      width: auto;
-      text-align: center;
-      flex-shrink: 0;
+        width: 50px; /* Smaller circle */
+        height: 50px; /* Smaller circle */
+        font-size: 30px; /* Adjust font size */
+        margin-right: 20px; /* Space between number and content */
+        flex-shrink: 0; /* Prevent shrinking of the number */
+      }
+      .key-point:not(:last-child)::after {
+        width: 2px; /* Line thickness */
+        height: 200%; /* Line height */
+        left: calc(25px - 1px); /* Center the line with the number */
+        top: 100%; /* Position the line below the number */
+        transform: translateY(-50%); /* Adjust alignment */
       }
       .key-point-content {
-      margin-left: 0;
+        margin-left: 0; /* Reset margin */
+        padding-top: 0; /* Remove top padding */
       }
       .key-point-content h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
+        font-size: 18px; /* Adjust font size */
+        margin-bottom: 15px; /* Space below heading */
       }
       .key-point-content li {
-      font-size: 14px;
+        font-size: 16px; /* Adjust font size */
       }
     }
 
-    @media (max-width: 576px) {
-      .key-points-section {
-      padding: 30px 30px;
-      }
+    @media (max-width: 992px) {
       .key-point {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 20px;
+        flex-direction: row; /* Ensure the number and content are side by side */
+        align-items: flex-start; /* Align items at the top */
+        text-align: left; /* Align text to the left */
       }
       .key-point-number {
-      font-size: 30px;
-      margin-right: 30px;
-      width: auto;
-      text-align: center;
-      flex-shrink: 0;
+        width: 60px; /* Adjust circle size */
+        height: 60px; /* Adjust circle size */
+        font-size: 35px; /* Adjust font size */
+        margin-right: 30px; /* Space between number and content */
+        flex-shrink: 0; /* Prevent shrinking of the number */
+      }
+      .key-point:not(:last-child)::after {
+        width: 2px; /* Line thickness */
+        height: 200%; /* Line height */
+        left: calc(30px - 1px); /* Center the line with the number */
+        top: 100%; /* Position the line below the number */
+        transform: translateY(-50%); /* Adjust alignment */
+      }
+      .key-point-content {
+        margin-left: 0; /* Reset margin */
+        padding-top: 0; /* Remove top padding */
       }
       .key-point-content h3 {
-      font-size: 14px;
-      margin-bottom: 5px;
+        font-size: 20px; /* Adjust font size */
+        margin-bottom: 20px; /* Space below heading */
       }
       .key-point-content li {
-      font-size: 12px;
+        font-size: 18px; /* Adjust font size */
       }
     }
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  .key-point {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .key-point-number {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+  .key-point:not(:last-child)::after {
+    height: 1000px;
+  }
+  .key-point-content h3 {
+    font-size: 10px;
+  }
+  .key-point-content li {
+    font-size: 10px;
+  }
+}
     .sticky-header {
       position: sticky;
       top: 0;
@@ -416,37 +429,92 @@
       color: #4ECDC4; /* Teal accent color for hover state */
     }
 
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .sticky-header .container {
-      flex-direction: column;
-      align-items: flex-start;
-      }
-      .sticky-header nav {
-      flex-wrap: wrap;
-      gap: 0.5rem; /* Reduce gap for smaller screens */
-      justify-content: center;
-      margin-top: 0.25rem; /* Adjust margin for smaller screens */
-      }
-      .sticky-header .logo {
-      font-size: 1rem; /* Adjust logo size for smaller screens */
-      }
-      .sticky-header nav a {
-      font-size: 0.8rem; /* Adjust font size for smaller screens */
-      }
-    }
+    /* Responsive Additions */
+@media (max-width: 768px) {
+  .sticky-header {
+    height: 50px; /* Increased height for mobile touch targets */
+  }
+  
+  .sticky-header .container {
+    padding: 0.5rem 1.5rem;
+  }
+  
+  .sticky-header nav {
+    display: none; /* Hide desktop nav by default */
+  }
+  
+  .sticky-header .logo {
+    font-size: 1.1rem; /* Slightly reduce logo size */
+  }
+  
+  /* Mobile menu toggle */
+  .menu-toggle {
+    display: block !important;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Mobile menu active state */
+  .sticky-header.active {
+    height: auto;
+    min-height: 50px;
+  }
+  
+  .sticky-header.active nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: rgba(5, 38, 88, 0.95);
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+}
+.menu-toggle {
+  display: none;
+}
 
-    @media (max-width: 576px) {
-      .sticky-header .container {
-        padding: 0.5rem 0.75rem;
-      }
-      .sticky-header .logo {
-        font-size: 1rem; /* Further adjust logo size for extra small screens */
-      }
-      .sticky-header nav a {
-        font-size: 0.8rem; /* Further adjust font size for extra small screens */
-      }
-    }
+/* Show toggle only on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block !important;
+    /* Rest of your existing mobile styles */
+  }
+  
+  /* Hide desktop navigation on mobile */
+  .sticky-header nav {
+    display: none;
+  }
+  
+  /* Show mobile navigation when active */
+  .sticky-header.active nav {
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  .sticky-header .container {
+    padding: 0.5rem 1rem;
+  }
+  
+  .sticky-header .logo {
+    font-size: 1rem;
+  }
+  
+  .sticky-header.active nav a {
+    font-size: 0.8rem;
+  }
+  
+  /* Adjust hover state for mobile */
+  .sticky-header nav a:active {
+    color: #4ECDC4;
+  }
+}
+
     :root {
       --primary-blue: #052658;
       --accent-teal: #2EC4B6;
@@ -483,69 +551,117 @@
       margin-top: 153px; /* Add 153px space above */
     }
     .hero-section h1 {
-      font-size: 55pt; /* Equivalent to 73px */
+      font-size: 27px; /* Equivalent to 73px */
       font-weight: 700;
       font-family: 'Archivo Black', sans-serif;
       margin-bottom: 1rem;
       line-height: 1.4; /* Set line height to 1.4 */
     }
     .hero-section h2 {
-      font-size: 36pt; /* 36pt converted to px */
+      font-size: 20px; /* 36pt converted to px */
       font-family: 'Archivo Black', sans-serif;
       line-height: 1.4; /* Set line height to 1.4 */
     }
     .hero-section p {
       font-family: 'Nunito', sans-serif;
       font-weight: bold;
-      font-size: 19px; /* Equivalent to 14pt */
+      font-size: 15px; /* Equivalent to 14pt */
       line-height: 1.4; /* Set line height to 1.4 */
     }
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url(./img/img1.png);
-      background-size: cover;
-      background-position: top right;
-      opacity: 0.7;
-      z-index: -1;
-    }
+    
+/* Media Queries */
+@media (max-width: 1200px) {
+  .hero-section .container {
+    max-width: 90%; /* Adjusted to ensure content stays within view */
+    margin-top: 8vh;
+    padding: 1.5rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+}
 
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .hero-section {
-        padding-left: 10%;
-        background-image: url(./img/img5.png);
-        background-position: bottom;
-      }
-      .hero-section .container {
-        transform: translateX(0);
-        text-align: left;
-      }
-      .hero-section h1 {
-        font-size: 2.5rem;
-      }
-      .hero-section p {
-        font-size: 1rem;
-      }
-    }
+@media (max-width: 992px) {
+  .hero-section {
+    background-position: center right;
+    padding: 1.5rem;
+  }
+  
+  .hero-section .container {
+    max-width: 90%; /* Adjusted to ensure content stays within view */
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
 
-    @media (max-width: 576px) {
-      .hero-section {
-        padding: 1rem;
-        background-image: url(./img/img5.png);
-        background-position: bottom;
-      }
-      .hero-section h1 {
-        font-size: 2rem;
-      }
-      .hero-section p {
-        font-size: 0.9rem;
-      }
-    }
+@media (max-width: 768px) {
+  .hero-section {
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+  }
+  
+  .hero-section .container {
+    margin-top: 5vh;
+    padding: 1rem;
+    max-width: 90%; /* Adjusted to ensure content stays within view */
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .hero-section p {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .hero-section .container {
+    max-width: 90%; /* Adjusted to ensure content stays within view */
+  }
+  
+  .hero-section h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 90%; /* Adjusted to ensure content stays within view */
+  }
+}
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
@@ -738,12 +854,13 @@
         <a href="#case-study">Case of Study</a>
         <a href="#footer">Contacts</a>
       </nav>
+      <button class="menu-toggle">☰</button>
     </div>
   </header>
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
     <div class="container">
-      <h1 class="display-4 fw-bold">Agile </h1>
+      <h1 class="display-4 fw-bold" style="margin-top: 80px;"> Agile </h1>
       <h2 class="display-4 fw-bold">La strada verso il futuro dello sviluppo software</h2>
       <p class="lead mt-3">Nel mondo dello sviluppo software, l’adattabilità è fondamentale. La
 metodologia Agile risponde a questa esigenza con un approccio flessibile e
@@ -840,69 +957,48 @@ il suo sviluppo.</li>
   <section>
  <h1 style="font-size: 44px; font-family: 'Archivo Black', sans-serif; margin-top: 63px; margin-bottom: 50px; margin-left: 87px;">Differenze tra Agile e Waterfall</h1>
 <div class="text-center">
-  <img src=img/ima.jpg alt="Example Image" class="img-fluid" style="margin-bottom: 107px;">
+  <img src="img/ima.jpg" alt="Example Image" class="img-fluid" style="width: 60%; margin-bottom: 60px;">
 </div>
 <section>
     <section id="waterfall-vs-agile" class="py-5 bg-light">
       <div class="text-center mb-5"></div>
-        <h2 class="section-title" style="color: #052658; font-size: 46px;">Differenze tra Waterfall e Agile</h2>
       </div>
       <div class="container">
         <div class="row align-items-center mb-5">
           <div class="col-lg-6">
-            <h3>Waterfall<br><small class="text-muted">Approccio Sequenziale</small></h3>
-            <p>La metodologia Waterfall segue un approccio lineare e sequenziale. Ogni fase del progetto deve essere completata prima di passare alla successiva. Questo modello è ideale per progetti con obiettivi ben definiti e poco soggetti a cambiamenti. Tuttavia, la sua rigidità rende difficile l'incorporazione di modifiche una volta che il progetto è in corso. Il coinvolgimento degli stakeholder è limitato principalmente alla fase iniziale e finale del progetto.</p>
+            <h3>Agile<br><small class="text-muted">Approccio interattivo</small></h3>
+            <p>Approccio interattivo: Si basa su iterazioni brevi e incrementali, chiamate sprint. Questo modello è estremamente flessibile e adattabile, permettendo di incorporare cambiamenti durante il processo. Favorisce il coinvolgimento continuo degli stakeholder durante tutto il ciclo di vita del progetto, assicurando che le esigenze degli utenti siano costantemente soddisfatte. La gestione dei rischi è proattiva, identificando e affrontando precocemente le potenziali criticità.</p>
             <div class="d-block d-lg-none text-center mt-3">
-              <img src=img/img3.jpg alt="Waterfall Model" class="img-fluid rounded" style="width: 60%;">
+              <img src="img/img4.jpg" alt="Waterfall Model" class="img-fluid rounded" style="width: 60%;">
             </div>
           </div>
           <div class="col-lg-6 text-center d-none d-lg-block">
-            <img src=img/img3.jpg alt="Waterfall Model" class="img-fluid rounded" style="width: 60%;">
+            <img src="img/img4.jpg" alt="Waterfall Model" class="img-fluid rounded" style="width: 60%;">
           </div>
         </div>
         <div class="row align-items-center">
           <div class="col-lg-6 text-center order-lg-2">
-            <img src=img/img4.jpg alt="Agile Framework" class="img-fluid rounded" style="width: 60%; height: auto; object-fit: cover;">
+            <img src="img/img3.jpg" alt="Agile Framework" class="img-fluid rounded" style="width: 60%; height: auto; object-fit: cover;">
           </div>
           <div class="col-lg-6 order-lg-1">
-            <h3>Agile<br><small class="text-muted">Approccio Iterativo</small></h3>
-            <p>Al contrario, l'approccio Agile si basa su interazioni brevi e incrementali, chiamate sprint. Questo modello è estremamente flessibile e adattabile, permettendo di incorporare cambiamenti durante il processo. L'Agile favorisce un coinvolgimento continuo degli stakeholder durante tutto il ciclo di vita del progetto, assicurando che le esigenze degli utenti siano costantemente soddisfatte. La gestione dei rischi è proattiva, identificando e affrontando precocemente le potenziali criticità.</p>
+            <h3>Waterfall<br><small class="text-muted">Approccio Sequenziale</small></h3>
+            <p>Approccio sequenziale: Segue un processo lineare e sequenziale. Ogni fase del progetto deve essere completata prima di passare alla successiva. È ideale per progetti con obiettivi ben definiti e poco soggetti a cambiamenti. Tuttavia, la sua rigidità rende difficile l'incorporazione di modifiche una volta che il progetto è in corso. Il coinvolgimento degli stakeholder è limitato principalmente alla fase iniziale e finale del progetto.</p>
           </div>
         </div>
         <div class="row align-items-center" style="margin-top: 150px; gap: 60px;">
           <div class="col-lg-5">
-            <h3>Analisi comparativa</h3>
+            <h3 style="margin-bottom: 30px;">Analisi comparativa</h3>
             <p>
-              La scelta tra Waterfall e Agile è cruciale per il
-              successo di un progetto. Se servono aderenza
-              a normative, pianificazione dettagliata e
-              obiettivi chiari sin dall’inizio, Waterfall è la
-              scelta più sicura. Questo approccio strutturato
-              riduce il rischio di deviazioni e garantisce il
-              rispetto dei requisiti, ma gestire cambiamenti
-              in corso può essere complesso e la mancanza
-              di feedback continui può far emergere
-              problemi troppo tardi.
-              Agile, invece, è perfetto per progetti che
-              richiedono flessibilità, adattamento costante e
-              collaborazione con il cliente.
+              Rispetto ad altri approcci tradizionali, Agile si distingue per la sua capacità di evolversi in risposta ai feedback continui e per il suo approccio incrementale. Un altro approccio metodologico che si differenzia significativamente da Agile è il modello Waterfall, che segue un processo più lineare e sequenziale. In Waterfall, ogni fase del progetto deve essere completata prima di passare alla successiva, con una pianificazione dettagliata e un'analisi approfondita dei requisiti fin dall'inizio.
+Questo approccio è ideale quando i requisiti sono ben definiti e non si prevede la necessità di modifiche durante il ciclo di vita del progetto.
             </p>
           </div>
           <div class="col-lg-5">
+            <div style="margin-bottom: 30px;"></div>
+
             <p>
-              Agile, invece, è perfetto per progetti che
-              richiedono flessibilità, adattamento
-              costante e collaborazione con il cliente.
-              Grazie a iterazioni brevi, permette modifiche
-              rapide e migliora la qualità finale. Tuttavia,
-              se mal implementato o applicato a contesti
-              con requisiti rigidi, può generare inefficienze
-              e costi imprevisti. L’efficacia di entrambi i
-              metodi dipende dal contesto: la scelta deve
-              basarsi sulla natura del progetto, la
-              chiarezza dei requisiti e la capacità del team
-              di adattarsi ai cambiamenti, bilanciando
-              struttura e flessibilità.
+              Questo approccio è ideale quando i requisiti sono ben definiti e non si prevede la necessità di modifiche durante il ciclo di vita del progetto.
+Mentre Agile permette flessibilità e adattamenti rapidi, Waterfall è più indicato quando è fondamentale rispettare rigorosamente una sequenza definita di attività, o quando i cambiamenti durante il progetto potrebbero comportare rischi significativi. Waterfall offre maggiore prevedibilità in termini di tempi e costi, ma può risultare meno reattivo alle modifiche e meno efficiente in ambienti dinamici o in progetti innovativi dove i requisiti potrebbero evolversi rapidamente.
             </p>
           </div>
         </div>
@@ -1005,6 +1101,20 @@ il suo sviluppo.</li>
   <script>
     AOS.init();
   </script>
+  <script>
+// Mobile Menu Toggle
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+  document.querySelector('.sticky-header').classList.toggle('active');
+});
+
+// Optional: Close menu when clicking outside
+document.addEventListener('click', (event) => {
+  const header = document.querySelector('.sticky-header');
+  if (!header.contains(event.target)) {
+    header.classList.remove('active');
+  }
+});
+</script>
 </body>
 </html>
 <!DOCTYPE html>
