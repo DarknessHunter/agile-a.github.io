@@ -111,20 +111,17 @@
     padding: 4rem 0;
     background-color: #0A192F; /* Deep navy blue */
     color: white;
-    background-image: url(img/c5.jpg); /* Background image */
+    background-image: url(img/img5.png); /* Background image */
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent repetition */
-    
 }
 .section-titlec {
-    font-family: 'Archivo Black', sans-serif;
-    font-weight: 900;
-    font-size: 44px;
-    margin-top: 125px;
-    margin-bottom: 40px;
-    text-align: left;
-    margin-left: 93.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-align: center;
     color: white;
 }
 
@@ -161,20 +158,31 @@
     }
 }
 
-   
+    /* Statistics Styling */
+    .statistics {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 30px;
+    }
+    .statistic {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 3;
+      text-align: left;
+    }
+
     /* Two-Column Layout */
     .two-column {
       display: flex;
-      gap: 30px; /* Space between columns */
+      gap: 60px; /* Space between columns */
     }
     .column {
       flex: 1; /* Equal width for both columns */
-      font-family: 'Nunito', sans-serif;
-      font-size: 14pt; /* Digital size */
-      font-weight: 400; /* Default = Regular (adjust if needed) */
-      line-height: 1.4;
-      margin-left: 93.5px;
-
+      font-family: 'Open Sans', sans-serif;
+      font-size: 20px;
+      line-height: 2;
     }
 
     /* Responsive Styles */
@@ -315,7 +323,7 @@
     .key-point-content li strong {
       font-weight: 700;
     }
-  
+    <style>
 /* DESKTOP VERSION (new design) */
 @media (min-width: 769px) {
   .key-points-section {
@@ -711,7 +719,7 @@
     /* Waterfall vs Agile Section */
     #waterfall-vs-agile {
         padding: 3rem 0; /* Increased vertical spacing */
-        background-color: #ffffff; /* Light gray background */
+        background-color: #faf8f8; /* Light gray background */
         margin-top: 0px; /* Add margin-top for spacing */
     }
 
@@ -809,7 +817,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -962,49 +969,48 @@ il suo sviluppo.</li>
           </div>
         </div>
         <div class="row align-items-center" style="margin-top: 150px; gap: 60px;">
-    <div class="col-lg-5 order-lg-1 order-2">
-        <h3 style="margin-bottom: 30px;">Analisi comparativa</h3>
-        <p>
-            Rispetto ad altri approcci tradizionali, Agile si distingue per la sua capacità di evolversi in risposta ai feedback continui e per il suo approccio incrementale. Un altro approccio metodologico che si differenzia significativamente da Agile è il modello Waterfall, che segue un processo più lineare e sequenziale. In Waterfall, ogni fase del progetto deve essere completata prima di passare alla successiva, con una pianificazione dettagliata e un'analisi approfondita dei requisiti fin dall'inizio.
-            Questo approccio è ideale quando i requisiti sono ben definiti e non si prevede la necessità di modifiche durante il ciclo di vita del progetto.
-        </p>
-    </div>
-    <div class="col-lg-5 order-lg-2 order-1">
-    <div style="margin-bottom: 55px;"></div>
-        <p class="mt-lg-0 mt-3">
-            Questo approccio è ideale quando i requisiti sono ben definiti e non si prevede la necessità di modifiche durante il ciclo di vita del progetto.
-            Mentre Agile permette flessibilità e adattamenti rapidi, Waterfall è più indicato quando è fondamentale rispettare rigorosamente una sequenza definita di attività, o quando i cambiamenti durante il progetto potrebbero comportare rischi significativi. Waterfall offre maggiore prevedibilità in termini di tempi e costi, ma può risultare meno reattivo alle modifiche e meno efficiente in ambienti dinamici o in progetti innovativi dove i requisiti potrebbero evolversi rapidamente.
-        </p>
-    </div>
-</div>
+          <div class="col-lg-5">
+            <h3 style="margin-bottom: 30px;">Analisi comparativa</h3>
+            <p>
+              Rispetto ad altri approcci tradizionali, Agile si distingue per la sua capacità di evolversi in risposta ai feedback continui e per il suo approccio incrementale. Un altro approccio metodologico che si differenzia significativamente da Agile è il modello Waterfall, che segue un processo più lineare e sequenziale. In Waterfall, ogni fase del progetto deve essere completata prima di passare alla successiva, con una pianificazione dettagliata e un'analisi approfondita dei requisiti fin dall'inizio.
+Questo approccio è ideale quando i requisiti sono ben definiti e non si prevede la necessità di modifiche durante il ciclo di vita del progetto.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div style="margin-bottom: 30px;"></div>
+
+            <p>
+              Questo approccio è ideale quando i requisiti sono ben definiti e non si prevede la necessità di modifiche durante il ciclo di vita del progetto.
+Mentre Agile permette flessibilità e adattamenti rapidi, Waterfall è più indicato quando è fondamentale rispettare rigorosamente una sequenza definita di attività, o quando i cambiamenti durante il progetto potrebbero comportare rischi significativi. Waterfall offre maggiore prevedibilità in termini di tempi e costi, ma può risultare meno reattivo alle modifiche e meno efficiente in ambienti dinamici o in progetti innovativi dove i requisiti potrebbero evolversi rapidamente.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   <!-- Case Study Section -->
   <section id="case-study">
     <div class="container">
       <div class="text-center">
-        <h2 class="section-titlec">Chaos Report 2020: Agile supera Waterfall in successo e efficienza</h2>
+        <h2 class="section-titlec">Casi Studio: Chaos Report 2020</h2>
+      </div>
+      <div class="statistics">
+        <div class="statistic">Successo Agile: 42%</div>
+        <div class="statistic">Successo Waterfall: 13%</div>
+        <div class="statistic">Efficienza: 3x</div>
       </div>
       <div class="two-column">
         <div class="column">
           <p>
-            Il Chaos Report 2020 del Standish Group fornisce dati concreti che dimostrano perché l’Agile è superiore al Waterfall. Secondo il report, i progetti Agile hanno un tasso di successo del 42%, rispetto a un misero 13% dei progetti Waterfall. Questo significa che i progetti Agile hanno una probabilità tre volte maggiore di avere successo.
-
-</p>
-
-<p>
-D’altra parte, i progetti Waterfall hanno un tasso di fallimento del 59%, mentre quello dei progetti Agile è solo dell’11%. In altre parole, i progetti Waterfall hanno una probabilità più del doppio di fallire rispetto a quelli Agile.
-</p>
-
-</div>
+            Il Chaos Report 2020 del Standish Group fornisce dati concreti che dimostrano perché l'Agile è superiore al Waterfall. Secondo il report, i progetti Agile hanno un tasso di successo del 42%, rispetto a un misero 13% dei progetti Waterfall. Questo significa che i progetti Agile hanno una probabilità tre volte maggiore di avere successo. D'altra parte, i progetti Waterfall hanno un tasso di fallimento del 59%, mentre quello dei progetti Agile è solo dell'11%. In altre parole, i progetti Waterfall hanno una probabilità più del doppio di fallire rispetto a quelli Agile.
+          </p>
+        </div>
         <div class="column">
           <p>
-            Anche se il 47% dei progetti Agile è classificato come "sfidante" (cioè affronta problemi di costi, tempi o scope), questi progetti riescono comunque a fornire valore.
-
- </p
+            Anche se il 47% dei progetti Agile è classificato come "sfidante" (cioè affronta problemi di costi, tempi o scope), questi progetti riescono comunque a fornire valore. Al contrario, i progetti Waterfall che falliscono spesso non consegnano alcun risultato utile. I dati del Chaos Report 2020 evidenziano l'importanza di adottare metodologie flessibili come l'Agile.
+          </p>
           <p>
-            Al contrario, i progetti Waterfall che falliscono spesso non consegnano alcun risultato utile. I dati del Chaos Report 2020 evidenziano l’importanza di adottare metodologie flessibili come l’Agile  Il Chaos Report 2020 conferma che l’Agile non solo migliora le probabilità di successo, ma riduce anche i rischi di fallimento, rendendolo la scelta preferita per progetti complessi e dinamici.
-            </p>
-            <div style="margin-bottom: 125px;"></div>
+            Il Chaos Report 2020 conferma che l'Agile non solo migliora le probabilità di successo, ma riduce anche i rischi di fallimento, rendendolo la scelta preferita per progetti complessi e dinamici.
+          </p>
         </div>
       </div>
     </div>
