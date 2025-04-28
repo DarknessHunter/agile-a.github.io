@@ -219,7 +219,6 @@
     /* Key Points Section */
     .key-points-section {
       padding: 60px 80px;
-      
       position: relative;
       background-color: #002859; /* Deep navy blue */
       color: #FFFFFF;
@@ -315,7 +314,7 @@
     .key-point-content li strong {
       font-weight: 700;
     }
-  <style>
+    <style>
 /* DESKTOP VERSION (new design) */
 @media (min-width: 769px) {
   .key-points-section {
@@ -422,10 +421,10 @@
       z-index: 1000;
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-color: rgb(0,43,92); /* Deep navy blue with 80% opacity */
+      background-color: RGB(0, 43, 92); /* Deep navy blue with 80% opacity */
       height: 33px; /* Set header height to 33px */
       display: flex; /* Ensure content aligns properly */
-      align-items: center; /* Vertically center content */
+      align-items: right; /* Vertically center content */
     }
     .sticky-header .container {
       display: flex;
@@ -438,6 +437,7 @@
       font-weight: 700;
       font-size: 1.25rem; /* Adjust font size to fit the smaller header */
       color: #FFFFFF; /* White text for logo */
+      margin-left: 40px ;
     }
     .sticky-header nav {
       display: flex;
@@ -571,7 +571,7 @@
   width: 100%;
   max-width: 1200px; /* Maximum content width */
   position: relative;
-  margin: 2rem auto; /* Vertical spacing */
+  margin-top: 153px;
   z-index: 2;
 }
 .hero-section::before {
@@ -591,12 +591,15 @@
   font-family: 'Archivo Black', sans-serif;
   margin-bottom: 1rem;
   line-height: 1.2;
+  margin-left: 9.5px;
+
 }
 
 .hero-section h2 {
   font-size: clamp(1.5rem, 3vw, 2.25rem); /* Fluid between 24px-36px */
   font-family: 'Archivo Black', sans-serif;
   line-height: 1.4;
+  margin-left: 9.5px;
 }
 
 .hero-section p {
@@ -605,6 +608,8 @@
   font-size: clamp(1rem, 1.5vw, 1.25rem); /* Fluid between 16px-20px */
   line-height: 1.4;
   max-width: 600px;
+  margin-left: 9.5px;
+
 }
 
 /* Tablet and desktop adjustments */
@@ -615,17 +620,11 @@
     background-position: top right;
   }
 
-  .hero-section .container {
-    margin-top: 6rem; /* Reduced from fixed 153px */
-    margin-left: 5%;
-    margin-right: auto;
-  }
 }
 
 /* Large desktop adjustments */
 @media (min-width: 1200px) {
   .hero-section .container {
-    margin-left: 87px;
     margin-right: 463px;
   }
 }
@@ -822,13 +821,12 @@
   <!-- Sticky Header -->
   <header class="sticky-header">
     <div class="container">
-      <div class="logo" style="margin-left: 9%; " >DesignHub</div>
+      <div class="logo">DesignHub</div>
       <nav>
         <a href="#hero">Home</a>
-        <a href="">Servizi</a>
+        <a href="#case-study">Servizi</a>
         <a href="#main-footer">Contatti</a>
-        <a href="">IT</a>
-       
+        <a href="#">IT</a>
       </nav>
       <button class="menu-toggle">☰</button>
     </div>
