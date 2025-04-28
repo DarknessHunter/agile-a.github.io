@@ -416,6 +416,7 @@
   }
 }
     .sticky-header {
+      padding: 0 20px;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -427,10 +428,12 @@
       align-items: right; /* Vertically center content */
     }
     .sticky-header .container {
+      min-width: 200px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0.5rem 1rem; /* Adjust padding to fit the smaller height */
+      flex-shrink: 0;
     }
     .sticky-header .logo {
       font-family: 'Montserrat', sans-serif;
@@ -438,6 +441,7 @@
       font-size: 1.25rem; /* Adjust font size to fit the smaller header */
       color: #FFFFFF; /* White text for logo */
       margin-left: 5%;
+      white-space: nowrap; /* Prevent text wrapping */
     }
     .sticky-header nav {
       display: flex;
