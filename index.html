@@ -480,8 +480,22 @@
   }
 }
 @media (max-width: 1200px) {
+    .sticky-header .logo {
+    width: auto; /* Allow natural width */
+    min-width: 160px; /* Prevent collapse */
+        margin-left:1%;
+  }
   .sticky-header nav {
-    gap: 30px;
+  }
+}
+      @media (max-width: 1199px) {
+  .sticky-header .logo {
+    width: auto;
+    maegin-left: 2%;
+  }
+
+  body {
+    font-size: 16px;
   }
 }
 
