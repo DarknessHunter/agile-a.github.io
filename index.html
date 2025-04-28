@@ -434,6 +434,8 @@
   gap: 30px; /* Fixed gap between elements */
   margin: 0 auto;
   padding: 0;
+      position: relative;
+
 }
 
 .sticky-header .logo {
@@ -444,7 +446,13 @@
   white-space: nowrap;
   flex-shrink: 0; /* Prevent shrinking */
   width: 200px; /* Fixed width */
-  margin-left: calc(114px - 20px); /* Subtract header's left padding */
+    /* NEW: Absolute positioning to enforce exact alignment */
+  position: absolute;
+  left: calc(114px - 20px); /* Subtract header's left padding */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it stays above other elements */
+}
 }
 .sticky-header nav {
   display: flex;
