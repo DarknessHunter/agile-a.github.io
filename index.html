@@ -461,10 +461,20 @@
       color: #4ECDC4; /* Teal accent color for hover state */
     }
 
+ @media (max-width: 992px) {
+  .sticky-header .logo {
+    width: auto; /* Allow natural width */
+    min-width: 160px; /* Prevent collapse */
+  }
+  
+  .sticky-header nav {
+    gap: 25px;
+  }
+}
     /* Responsive Additions */
 @media (max-width: 1200px) {
       .sticky-header {
-        padding: 0 3%; /* Adjust padding for smaller screens */
+        padding: 0 7%; /* Adjust padding for smaller screens */
       }
     }
 @media (max-width: 768px) {
