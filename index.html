@@ -152,7 +152,7 @@
 
     #case-study {
     padding: 1.5rem 1rem; /* Further adjust padding for extra small screens */
-    background-size: cover; /* Ensure the background image covers the entire section */
+    background-size: cover; /* Ensure th.stickye background image covers the entire section */
     background-position: center; /* Center the background image */
     }
 
@@ -415,41 +415,48 @@
     font-size: 10px;
   }
 }
-    .sticky-header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      background-color: RGB(0, 43, 92); /* Deep navy blue with 80% opacity */
-      height: 33px; /* Set header height to 33px */
-      display: flex; /* Ensure content aligns properly */
-      align-items: center ; /* Vertically center content */
-      padding: 0 5%;
-    }
-    .sticky-header .container {
-      width: 100%;
-      max-width: 1400px;
-      min-width: 200px;
-      margin: 0  auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.5rem 1rem; /* Adjust padding to fit the smaller height */
-      flex-shrink: 0;
-    }
-    .sticky-header .logo {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 20px; /* Adjust font size to fit the smaller header */
-      color: #FFFFFF; /* White text for logo */
-      margin-left: 0.5%;
-      white-space: nowrap; /* Prevent text wrapping */
-      min-width: 180px;
-    }
-    .sticky-header nav {
-      display: flex;
-      gap: 70px;
-    }
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #002859; /* Solid color for consistency */
+  height: 30px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Fixed padding */
+}
+
+.sticky-header .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This is key */
+  gap: 30px; /* Fixed gap between elements */
+  margin: 0 auto;
+  padding: 0;
+}
+
+.sticky-header .logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  white-space: nowrap;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 200px; /* Fixed width */
+}
+.sticky-header nav {
+  display: flex;
+  gap: 40px; /* Reduced from 70px */
+  flex-grow: 1; /* Take available space */
+  justify-content: flex-end; /* Push nav to right */
+  max-width: 600px; /* Prevent overflow */
+}
+
+/* Mobile menu toggle alignment */
+.menu-toggle {
+  margin-left: auto; /* Push toggle to right */
+}
     .sticky-header nav a {
       font-family: 'Poppins', sans-serif;
       font-size: 0.9rem; /* Adjust font size to fit the smaller header */
@@ -460,8 +467,7 @@
     .sticky-header nav a:hover {
       color: #4ECDC4; /* Teal accent color for hover state */
     }
-
- @media (max-width: 992px) {
+    @media (max-width: 992px) {
   .sticky-header .logo {
     width: auto; /* Allow natural width */
     min-width: 160px; /* Prevent collapse */
@@ -469,6 +475,34 @@
   
   .sticky-header nav {
     gap: 25px;
+  }
+}
+@media (max-width: 1200px) {
+  .sticky-header nav {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sticky-header .logo {
+    width: auto; /* Allow natural width */
+    min-width: 160px; /* Prevent collapse */
+  }
+  
+  .sticky-header nav {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sticky-header {
+    height: 50px;
+    padding: 0 15px;
+  }
+  
+  .sticky-header .logo {
+    font-size: 20px;
+    min-width: 140px;
   }
 }
     /* Responsive Additions */
