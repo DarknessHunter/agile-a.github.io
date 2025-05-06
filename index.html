@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DesignHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color:  #330136;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background-color: #5e1742;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 40px;
+      font-size: 18px;
+    }
+
+    .hero-section {
+      height: 100vh;
+      background: url('img/img1.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .info-section {
+      background-color: transparent;
+      padding: 80px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .info-box {
+      background-color: #5e1742;
+      border-radius: 40px;
+      max-width: 1200px;
+      width: 100%;
+      padding: 50px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+
+    .info-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    .icon-search {
+      font-size: 60px;
+      margin-right: 24px;
+      color: white;
+    }
+
+    .info-header h2 {
+      flex: 1;
+      font-size: 2.7rem;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .info-icons {
+      display: flex;
+      gap: 24px;
+    }
+
+    .info-icons i {
+      font-size: 40px;
+      color: white;
+    }
+
+    .info-content {
+      display: flex;
+      gap: 48px;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    .info-content > div {
+      flex: 1;
+    }
+
+    .desktop-mobile-section {
+      padding: 80px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .desktop-mobile-title {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .desktop-mobile-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+    }
+
+    .desktop-mobile-image-container {
+      position: relative;
+      flex: 1;
+      max-width: 520px;
+    }
+
+    .desktop-mobile-image {
+      width: 100%;
+      border-radius: 32px;
+      display: block;
+    }
+
+    .desktop-mobile-icon-search,
+    .desktop-mobile-icon-menu {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #e0b3ff;
+      font-size: 1.7rem;
+      color: #a13be2;
+    }
+
+    .desktop-mobile-icon-search {
+      top: 32px;
+      left: 32px;
+    }
+
+    .desktop-mobile-icon-menu {
+      bottom: 40px;
+      right: 40px;
+    }
+
+    .desktop-mobile-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .desktop-mobile-text h3 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .desktop-mobile-text p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    @media (max-width: 900px) {
+      .info-content {
+        flex-direction: column;
+      }
+
+      .desktop-mobile-content {
+        flex-direction: column;
+      }
+
+      .info-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-header h2 {
+        margin: 20px 0;
+      }
+    }
+
+    .search-design-section {
+      position: relative;
+      height: 420px; /* Adjust as needed */
+      display: flex;
+      align-items: center;
+      background: none;
+      margin-bottom: 60px;
+      background-color: #ff5e35;
+
+    }
+
+    .search-design-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 70%;
+      height: 100%;
+      background: url('img/Risorsa 3.png') no-repeat center center/cover;
+      z-index: 1;
+      border-radius: 0 60px 60px 0;
+    }
+
+    .search-design-card {
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      color: #330136;
+      border-radius: 40px;
+      padding: 48px 56px;
+      max-width: 480px;
+      margin-left: 800px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .search-design-card h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .search-design-card p {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .search-evolution-section {
+      background: #330136;
+      color: #fff;
+      padding: 80px 0 60px 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .search-evolution-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    .search-evolution-row {
+      display: flex;
+      gap: 60px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .search-evolution-col {
+      flex: 1;
+      min-width: 260px;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 10px;
+    }
+
+    /* Tablet adjustments */
+    @media (max-width: 900px) {
+      .search-evolution-row {
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 32px;
+      }
+      .search-evolution-col {
+        min-width: 0;
+        font-size: 1.08rem;
+      }
+      .search-evolution-container {
+        padding: 0 10px;
+      }
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .search-evolution-section {
+        padding: 40px 0 30px 0;
+      }
+      .search-evolution-row {
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+      .search-evolution-col {
+        font-size: 1rem;
+        padding: 0 2px;
+      }
+    }
+
+    .search-evolution-title {
+      text-align: center;
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 36px;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    .hamburger span {
+      height: 3px;
+      width: 28px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    @media (max-width: 700px) {
+      .header {
+        padding: 16px 10px;
+      }
+      .logo {
+        font-size: 22px;
+      }
+      .nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #5e1742;
+        flex-direction: column;
+        width: 100vw;
+        align-items: flex-start;
+        padding: 20px 0 20px 20px;
+        display: none;
+      }
+      .nav.active {
+        display: flex;
+      }
+      .nav a {
+        margin: 12px 0;
+        font-size: 1.1rem;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">DesignHub</div>
+    <div class="hamburger" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav" id="main-nav">
+      <a href="#">Home</a>
+      <a href="#">Servizi</a>
+      <a href="#">Contatti</a>
+      <a href="#">IT</a>
+    </nav>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <!-- Optional: Add tagline or slogan -->
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-box">
+      <div class="info-header">
+        <i class="bi bi-search icon-search"></i>
+        <h2>Cos'è una barra di ricerca?</h2>
+        <div class="info-icons">
+          <i class="bi bi-mic"></i>
+          <i class="bi bi-image"></i>
+        </div>
+      </div>
+      <div class="info-content">
+        <div>
+          <p>
+            La barra di ricerca di un sito web è una componente dell'interfaccia utente che consente agli utenti di inserire query testuali per cercare contenuti all'interno del sito, di un database o di un'applicazione. È composta principalmente da un campo di input testuale e da un pulsante per avviare la ricerca.
+            <br><br>
+            Dal punto di vista funzionale, quando l'utente digita una parola chiave e invia la query, il sistema esegue una ricerca nel database o nell'indice dei contenuti indicizzati, restituendo risultati rilevanti in base a algoritmi di ranking che valutano la pertinenza, la qualità e altri fattori.
+          </p>
+        </div>
+        <div>
+          <p>
+            Dal punto di vista tecnico, per garantire una buona esperienza, la barra di ricerca deve essere veloce nel fornire risultati, mobile-friendly e integrata con funzionalità di filtro e ordinamento. Le tecnologie sottostanti possono includere NLP, machine learning e AI per interpretare meglio le query.
+            <br><br>
+            In sintesi, la barra di ricerca è un'interfaccia tecnica che collega l'input dell'utente a un motore di ricerca interno o esterno, elaborando la query e restituendo risultati pertinenti in modo rapido e intuitivo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="desktop-mobile-section">
+    <h2 class="desktop-mobile-title">Desktop VS Mobile</h2>
+    <div class="desktop-mobile-content">
+        <div class="desktop-mobile-image-container">
+            <img src="img/img-02.jpg" alt="Desktop vs Mobile" class="desktop-mobile-image">
+            <div class="desktop-mobile-icon-search">
+                <i class="bi bi-search"></i>
+            </div>
+            <div class="desktop-mobile-icon-menu">
+                <i class="bi bi-list"></i>
+            </div>
+        </div>
+        <div class="desktop-mobile-text">
+            <h3 style="font-size: 1.7rem; font-weight: 600; margin-bottom: 18px;">Posizionamento e accessibilità</h3>
+            <p style="font-size: 1.15rem; line-height: 1.7; font-weight: 400;"></p>
+            
+            <p>
+                La barra di ricerca su desktop è solitamente ben visibile, posizionata in alto, al centro o in una sidebar, con spazio sufficiente per inserire query anche lunghe. Su mobile, invece, le dimensioni ridotte dello schermo richiedono un approccio più compatto: può essere nascosta dietro un'icona e mostrata su richiesta.
+            </p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px; margin-top: 20px;">
+            <div>
+            <h3 style="font-size: 1.7rem; font-weight: 600; margin-bottom: 18px;">Aspetto grafico</h3>
+            <p style="font-size: 1.15rem; line-height: 1.7; font-weight: 400;"></p>
+                Il design su desktop si presenta in modo più articolato, con icone ben definite, placeholder descrittivi che aiutano l'utente a comprendere meglio le funzionalità, e pulsanti evidenti che facilitano l'interazione. L'organizzazione degli elementi sfrutta lo spazio disponibile per offrire un'esperienza completa.
+                <br><br>
+                Su mobile, invece, l'interfaccia assume un aspetto più minimalista: le icone sono più grandi per agevolare l'uso touch, i testi sono ridotti e disposti in modo da adattarsi agli schermi più piccoli, privilegiando la semplicità e l'immediatezza nella navigazione.
+            </p>
+            </div>
+            <img src="img/img3.png" alt="Posizionamento e accessibilità" style="width: 50%; border-radius: 16px;">
+        </div>
+        <div style="display: flex; align-items: center; gap: 20px; margin-top: 20px;">
+            <img src="img/img4.jpg" alt="Funzionalità aggiuntive" style="width: 50%; border-radius: 16px;">
+            
+            <div>
+                <h3 style="font-size: 1.7rem; font-weight: 600; margin-bottom: 18px;">Funzionalità aggiuntive</h3>
+            <p style="font-size: 1.15rem; line-height: 1.7; font-weight: 400;"></p>
+                
+                <p>
+                    La barra di ricerca nella versione desktop offre 
+                    un'esperienza più completa e interattiva: può 
+                    includere suggerimenti avanzati, filtri dinamici e, in 
+                    alcuni casi, anteprime dei risultati. Questo consente 
+                    una ricerca più mirata e dettagliata, sfruttando lo 
+                    spazio disponibile.
+                    <br><br>
+                    Su mobile, invece, queste funzionalità sono 
+                    semplificate per mantenere l'interfaccia essenziale.
+                    I suggerimenti sono rapidi e sintetici, pensati per un 
+                    uso immediato e ottimizzato per la navigazione touch.
+                </p>
+            </div>
+        </div>
+    </div>
+    <section style="margin-top: 120px; position: relative;"></section>
+        <h2 style="font-weight: 600; font-size: 2.5rem; color: #ff5e35;">Significato dell'Icona "Lente di Ingrandimento"</h2>
+        <div style="display: flex; align-items: center; gap: 20px; margin-top: 20px; max-width: 1200px; margin-left: auto; margin-right: auto;">
+            <p style="color: #ff5e35; flex: 1; font-size: 1.2rem; line-height: 1.8;">
+                L'icona della lente di ingrandimento è comunemente 
+                utilizzata come simbolo della funzione di ricerca perché 
+                richiama, in modo immediato e intuitivo, l'idea 
+                dell'investigazione e dell'osservazione attenta. 
+                Storicamente, la lente è uno strumento utilizzato per 
+                esaminare oggetti nei dettagli, rendendo visibili 
+                elementi altrimenti difficili da notare a occhio nudo. 
+                Questo significato si è trasferito nell'immaginario 
+                collettivo, spesso associato a figure come gli 
+                investigatori. Nel contesto delle interfacce digitali, la 
+                lente di ingrandimento si è affermata come simbolo 
+                universale della ricerca, grazie alla sua capacità di 
+                rappresentare visivamente l'azione di "cercare", 
+                "esplorare" o "trovare un contenuto". È facilmente 
+                riconoscibile anche a livello internazionale, il che la 
+                rende particolarmente adatta all'uso in ambienti 
+                multilingua o interculturali.
+            </p>
+            <img src="img/Risorsa 1.png" alt="Lente di Ingrandimento" style="width: 1%; border-radius: 16px; flex: 1;">
+        </div>
+    </section>
+
+    <section class="search-design-section">
+      <div class="search-design-bg"></div>
+      <div class="search-design-card">
+        <h2>Lente o Pulsante "Cerca"?</h2>
+        <p>Accessibilità e Design</p>
+      </div>
+    </section>
+
+    <section class="search-evolution-section">
+      <h2 class="search-evolution-title">Evoluzione del Pulsante "Cerca"</h2>
+      <div class="search-evolution-container">
+        <div class="search-evolution-row">
+          <div class="search-evolution-col" style="flex:2;">
+            Negli ultimi anni, Google e altri motori di ricerca hanno sperimentato il passaggio dall'icona della lente di ingrandimento a un pulsante testuale "Cerca" per migliorare la chiarezza e l'accessibilità, soprattutto su dispositivi mobili.
+          </div>
+          <div class="search-evolution-col" style="flex:2;">
+            <b>Adattamento al contesto:</b><br>
+            La lente non è scomparsa del tutto: spesso è ancora visibile accanto al campo di ricerca o integrata come simbolo secondario. È diventata un elemento più discreto, adattato al design responsive e alle abitudini degli utenti.
+          </div>
+        </div>
+        <div class="search-evolution-row">
+          <div class="search-evolution-col">
+            <b>Motivazioni del cambiamento:</b><br>
+            Chiarezza dell'azione: Il pulsante testuale è più esplicito, riducendo ambiguità per utenti meno esperti.<br>
+            Maggiore visibilità: È più facile da cliccare rispetto a una piccola icona, specialmente con mouse o touch.<br>
+            Accessibilità: Il testo "Cerca" può essere letto chiaramente da screen reader, rendendo l'interfaccia più inclusiva.
+          </div>
+          <div class="search-evolution-col">
+            <b>Design moderno e coerente:</b><br>
+            Si inserisce in una tendenza generale verso interfacce più chiare e testuali.<br>
+            Test A/B e usabilità: Il cambiamento è stato supportato da test per garantire un miglioramento reale dell'esperienza utente.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="background-color: #ff5e35; padding: 60px 20px 40px; font-family: 'Montserrat', sans-serif; font-weight: 700; color: white;">
+      <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 30px;">
+        <div style="flex: 1; min-width: 250px;">
+          <h2 style="font-size: 2rem; margin-bottom: 16px;">DesignHub</h2>
+          <p style="font-weight: 400; font-size: 1rem; max-width: 400px; line-height: 1.6;">
+            Where innovation meets design. Discover our digital tools that empower your creativity.
+          </p>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <h3 style="margin-bottom: 16px; font-size: 1.2rem;">Quick Links</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="#" style="color: white; text-decoration: none; display: block; margin: 6px 0;">Home</a></li>
+            <li><a href="#" style="color: white; text-decoration: none; display: block; margin: 6px 0;">Services</a></li>
+            <li><a href="#" style="color: white; text-decoration: none; display: block; margin: 6px 0;">Contact</a></li>
+            <li><a href="#" style="color: white; text-decoration: none; display: block; margin: 6px 0;">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div style="flex: 1; min-width: 200px;">
+          <h3 style="margin-bottom: 16px; font-size: 1.2rem;">Follow Us</h3>
+          <div style="display: flex; gap: 16px; font-size: 1.6rem;">
+            <a href="#" style="color: white;"><i class="bi bi-facebook"></i></a>
+            <a href="#" style="color: white;"><i class="bi bi-instagram"></i></a>
+            <a href="#" style="color: white;"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" style="color: white;"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; text-align: center; font-weight: 400; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 20px;">
+        © 2025 DesignHub. All rights reserved.
+      </div>
+    </footer>
